@@ -1,0 +1,557 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&family=Ubuntu:ital,wght@0,500,600;0,700;1,400;1,500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 70%;
+}
+
+@media( min-width: 620px ){
+    html{
+        font-size: 80%;
+    }
+}
+@media( min-width: 768px ){
+    html{
+        font-size: 90%;
+    }
+}
+@media( min-width: 1024px ){
+    html{
+        font-size: 100%;
+    }
+}
+
+:root {
+    /* --blueLight: #4070F4;
+    --blueForce: #0E2431;
+    --blueWhite: #F0F8FF; */
+
+    --blueLight: #6ab04c;
+    --blueForce: #0E2431;
+    --blueWhite: #F0F8FF;
+
+    
+}
+
+/* Navegacion Menu ..........................................................*/
+section {
+    padding-top: 2.5rem;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+   padding: 1.4rem 0;
+   transition:  all .2s ease;
+   z-index: 999;
+}
+nav.styki{
+    padding: 0.9rem 0;
+    background-color: var(--blueLight);
+}
+nav .navbar {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+nav .navbar .logo a{
+    font-size:  2.5rem;
+    font-weight: 500;   
+    color: var(--blueLight);
+}
+nav.styki .navbar .logo a{
+    color: #fff;
+}
+
+nav .navbar .menu {
+    display: flex;
+    /* transition: all .2s; */
+}
+
+nav .navbar .menu li{
+    margin: 0 0.5rem;
+    list-style: none;
+}
+nav .navbar .menu li a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--blueForce);
+    transition: all .2s;
+}
+nav .navbar .menu li a:hover{
+    color: var(--blueLight);
+}
+
+nav.styki .navbar .menu li a{
+    color: #fff;
+}
+nav.styki .navbar .menu li a:hover{
+    color: var(--blueForce);
+}
+nav .navbar .media-icons a {
+    font-size: 1.1rem;
+    color: var(--blueLight);
+    margin: 0 0.5rem;
+}
+nav.styki .navbar .media-icons a {
+    color: #fff;
+}
+
+/* Botones de navegacion close y menu */
+nav .menu-btn, .cancel-btn{
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+    font-size: 1.5rem;
+    display: none;
+}
+
+nav .menu-btn{
+    color: var(--blueForce);
+}
+
+nav .cancel-btn{
+    color: #fff;
+}
+
+
+
+/* Seccion Home ......................................................*/
+
+.home{
+    height: 100vh;
+    background:   url("images/bak.png") no-repeat ;
+    background-size: cover;
+    background-position:  center;
+    background-attachment: fixed;
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    opacity: 0;
+    transition:  all 0.2s ease-in;
+    animation: showBackground 0.2s linear forwards;
+}
+
+@keyframes showBackground {
+    100%{
+        opacity: 1;
+    }
+}
+
+.home .home-context{
+    /* background: red; */
+    width: 90%;
+    margin:  0 auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home .text .text-one {
+    font-size: 1.6rem;
+}
+.home .text .text-two {
+    font-size: 4rem;
+    font-weight: 600;
+}
+.home .text .text-three {
+    font-size: 2.5rem;
+    margin: 5px 0;
+}
+
+.button{
+    margin: 1rem 0;
+}
+
+.button button{
+    outline: none;
+    background-color: var(--blueLight);
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.4rem;
+    border: 2px solid transparent;
+  
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+.button button a {
+    color: #fff;
+}
+
+.button button:hover {
+    background-color: #fff;
+    border-color: var(--blueLight);
+    color: var(--blueLight);
+    cursor: pointer;
+}
+
+.button button:hover  a{
+    color: var(--blueLight);
+    cursor: pointer;
+}
+
+
+
+/* Seccion About ......................................................*/
+.about .about-details .right img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1.2rem;
+}
+
+.about .about-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .content {
+    width: 80%;
+    margin: 3.2rem auto;
+    font-family: "Poppins" , sans-serif;
+}
+section .topic{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+section .title {
+    display: flex;
+    justify-content: center;
+}
+section .title span {
+    font-size:  2rem;
+    font-weight: 500;
+    padding-bottom: 0.9rem;
+    color: var(--blueForce);
+}
+
+
+.about .about-details .left .topic {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--blueForce);
+}
+.about .about-details .left p {
+    text-align: justify;
+    color: var(--blueForce);
+}
+
+.about .right{
+    width: 45%;
+}
+
+.about .left{
+    width: 55%;
+}
+
+
+/* Seccion Skills ......................................................*/
+.skills{
+    background-color: var(--blueWhite);
+}
+.skills .content{
+    padding: 2.5rem 0;
+}
+.skills-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-details .left{
+    width: 50%;
+    text-align: justify;
+}
+.skills .skills-details .left .topic{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.skills .skills-details .left .experience{
+    display: flex;
+    align-items: center;
+}
+.skills .skills-details .left .experience .num{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--blueForce);
+}
+.skills .skills-details .left .experience .exp{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--blueForce);
+}
+
+.skills .skills-details .boxes{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.skills .skills-details .boxes .box{
+    width: calc(100% / 2 - 20px);
+}
+.skills .skills-details .boxes .box .topic{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--blueForce);
+}
+
+.skills .skills-details .boxes .box .num{
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--blueLight);
+}
+
+
+/* Seccion services ......................................................*/
+
+.services .boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services .boxes .box{
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+    box-shadow: 0px 5px 8px rgba(0,0,0,.2);
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    transition: all .4s ease;
+}
+.services .boxes .icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--blueLight);
+    text-align: center;
+    margin: 0 auto 10px auto;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+.services .boxes .box:hover .icon {
+    background-color: #fff;
+    color: var(--blueLight);
+}
+.services .boxes .box:hover  {
+    background-color: var(--blueLight);
+    color: #fff;
+}
+
+/* Seccion proyectos ......................................................*/
+
+.project .boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project .content{
+    width: 80%;
+}
+
+.project .boxes .box{
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+ 
+    /* padding: 1.2rem; */
+    border-radius: 0.8rem;
+    text-align: center;
+    transition: all .4s ease;
+}
+.project .boxes .preview {
+    box-shadow: 0px 0px 0px 4px  rgba(255,255,255,1), 0px 0px 5px 5px rgba(0,0,0,.2);
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.project .boxes .preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s ease-in;
+    border-radius: 5px;
+}
+.project .boxes .box:hover img{
+    transform: scale(1.1) translateX(-1%);
+}
+.project .boxes .box .topic{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* Seccion contacto ......................................................*/
+.contact {
+    background-color: var(--blueWhite);
+}
+.contact .content{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+/* Seccion footer ......................................................*/
+
+footer{
+    background-color: var(--blueLight);
+   
+    padding: 1.1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Ubuntu" ,sans-serif;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+.scroll-btn{
+    width: 40px;
+    height: 40px;
+    background-color: var(--blueLight);
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.5);
+}
+.scroll-btn a {
+    display: block;
+    color: #fff;
+}
+/* Responsive media query css */
+
+@media (max-width : 970px){
+    .about .about-details .right img{
+        width: 350px;
+        height: 350px;
+    }
+    .contact .content{
+        width: 80%;
+    }
+    .contact .content p{
+        font-size: 1.1rem;
+    }
+
+    .project .boxes .box{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width : 1090px){
+    .about .about-details {
+        flex-direction: column;
+    }
+    .about .about-details .right {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+
+    .about .about-details .left {
+        margin: 2rem 0;
+        width: 85%;
+     }
+
+     .skills .content{
+        width: 85%;
+    }
+     .skills-details {
+       flex-direction: column;
+    }
+    
+.skills .skills-details .boxes{
+    width: 100%;
+}
+
+.skills .skills-details .left{
+    width: 100%;
+    margin: 2.3rem 0;
+}
+
+.services .boxes .box{
+    width: calc(100% / 2 - 20px);
+}
+    
+    
+}
+
+@media (max-width: 750px){
+
+   
+
+    nav .menu-btn, .cancel-btn{
+        font-size: 1.9rem;
+        display: block;
+    }
+
+    nav .navbar .menu{
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        background-color: var(--blueForce);
+        max-width: 400px;
+        width: 100%;
+        padding-top: 3.7rem;
+        transition:  all .3s ease;
+    }
+
+    nav .navbar.active .menu{
+        left: 0;
+    }
+
+    nav .navbar .menu li a {
+        font-size: 1.5rem;
+        color: #fff;
+        /* background-color: red; */
+        display: block;
+        margin: 1rem 0;
+    }
+
+    nav .navbar .media-icons a {
+        display: none;
+    }
+
+    .services .boxes .box{
+        width: 100% ;
+    }
+    .services .content {
+        width: 85%;
+    }
+        
+    /* nav .navbar .menu li {
+        width: 100%;
+        background-color: green;
+        
+    } */
+}
